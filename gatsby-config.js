@@ -14,6 +14,12 @@ module.exports = {
           'Catamaran:400,500,600,700'
         ]
       }
-    }
+    },
+    {
+      resolve: 'gatsby-source-medium',
+      options: {
+        username: 'MicroBenz',
+      },
+    },
   ],
 };

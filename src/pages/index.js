@@ -50,7 +50,7 @@ const IndexPage = (props) => {
       <Banner />
       <div className="container">
         <Geek />
-        <Writer posts={data.allMediumPost.edges.map(e => e.node)} />
+        <Writer posts={data.allMediumPost.edges.map(e => e.node).slice(0, 4)} />
       </div>
     </div>
   );

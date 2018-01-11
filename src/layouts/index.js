@@ -1,42 +1,38 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-import styled from 'styled-components';
+import { ThemeProvider, injectGlobal } from 'styled-components';
 
 import 'bulma/bulma.sass';
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: red;
+const theme = {
+  main: '#0c4c8a',
+  white: '#ffffff',
+  gray: '#353535'
+};
+
+/* eslint-disable */
+injectGlobal`
+  body {
+    font-family: 'Catamaran', sans-serif;
+    color: ${theme.gray};
+  }
 `;
+/* eslint-enable */
 
 const TemplateWrapper = props => {
   const { children } = props;
   return (
     <div>
       <Helmet
-        title="Gatsby Default Starter"
+        title="เบนซ์นะจ๊ะ - MicroBenz"
         meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
+          { name: 'description', content: '' },
+          { name: 'keywords', content: '' },
         ]}
       />
-      <section className="hero is-medium is-primary is-bold">
-        <div className="hero-body">
-          <div className="container">
-            <h1 className="title">
-              Primary bold title
-            </h1>
-            <h2 className="subtitle">
-              Primary bold subtitle
-            </h2>
-          </div>
-        </div>
-      </section>
-      <div>
-        <Title>Hello it's me</Title>
+      <ThemeProvider theme={theme}>
         {children()}
-      </div>
+      </ThemeProvider>
     </div>
   );
 };

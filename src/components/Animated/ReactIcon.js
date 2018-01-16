@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 import styled from 'styled-components';
-import lottie from 'lottie-web';
 import { withPrefix } from 'gatsby-link';
 
 const LottieDiv = styled.div.attrs({
@@ -24,6 +23,7 @@ export default class ReactIcon extends PureComponent {
   onChangeVisible(isVisible) {
     if (!this.state.isVisible && isVisible) {
       this.setState({ isVisible });
+      const lottie = require('lottie-web');
       lottie.loadAnimation({
         container: document.getElementById('react-lottie'),
         renderer: 'svg',

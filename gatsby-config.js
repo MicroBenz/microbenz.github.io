@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'MicroBenz',
   },
+  pathPrefix: '/microbenz.github.io',
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',

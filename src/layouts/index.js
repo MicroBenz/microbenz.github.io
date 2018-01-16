@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import { ThemeProvider, injectGlobal } from 'styled-components';
 
 import 'bulma/bulma.sass';
+import 'font-awesome/css/font-awesome.min.css';
 
 const theme = {
   main: '#0c4c8a',

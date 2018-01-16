@@ -11,7 +11,7 @@ module.exports = {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          'Catamaran:400,500,600,700'
+          'Catamaran:300,400,500,600,700'
         ]
       }
     },

@@ -1,13 +1,17 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import { injectGlobal } from 'styled-components';
 
 import Banner from '../components/Banner';
-import Geek from '../components/Geek';
-import Writer from '../components/Writer';
+import Me from '../components/Section/Me';
+import Geek from '../components/Section/Geek';
+import Writer from '../components/Section/Writer';
+import Footer from '../components/Footer';
 
 /* eslint-disable */
 injectGlobal`
+  body {
+    color: #4a4a4a;
+  }
   .column {
     @media(max-width: 768px) {
       padding: 0;
@@ -49,9 +53,11 @@ const IndexPage = (props) => {
     <div>
       <Banner />
       <div className="container">
+        <Me />
         <Geek />
-        <Writer posts={data.allMediumPost.edges.map(e => e.node).slice(0, 4)} />
+        <Writer posts={data.allMediumPost.edges.map(e => e.node)} />
       </div>
+      <Footer />
     </div>
   );
 };

@@ -3,17 +3,13 @@ import styled, { css } from 'styled-components';
 import { withPrefix } from 'gatsby-link';
 
 const Container = styled.div`
-  /* background-color: ${props => props.theme.main}; */
   background: url('${withPrefix('./banner.jpg')}');
-  background-position: 50% 50%;
+  background-position: 50% 35%;
   background-size: cover;
   height: 500px;
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
+  background-repeat: no-repeat;
   @media(max-width: 768px) {
     height: 350px;
-    /* flex-direction: column; */
   }
 `;
 
@@ -22,7 +18,7 @@ const InnerContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.65);
   @media(max-width: 768px) {
     flex-direction: column;
   }

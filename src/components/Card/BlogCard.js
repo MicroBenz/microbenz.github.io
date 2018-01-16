@@ -2,26 +2,32 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  border-radius: 10px;
+  position: relative;
 `;
 
 const Image = styled.img`
-  border-radius: 10px 10px 0 0;
   display: block;
 `;
 
 const TitleContainer = styled.div`
-  border: 1px solid rgba(0,0,0,.1);
   padding: 10px;
-  border-radius: 0 0 10px 10px;
   display: flex;
-  height: 70px;
-  justify-content: center;
   align-items: center;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 27%,rgba(0,0,0,0) 100%);
 `;
 
 const BlogTitle = styled.h2`
   font-weight: bold;
+  color: white;
+  font-size: 23px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 `;
 
 const BlogCard = props => {

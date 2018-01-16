@@ -7,5 +7,5 @@ export default styled.i.attrs({
   'aria-hidden': 'true'
 })`
   color: ${props => props.color || colors.black};
-  font-size: ${props => props.size || 22}px;
+  font-size: ${props => props.size || 22}px !important;
 `;

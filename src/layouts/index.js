@@ -14,8 +14,8 @@ const theme = {
 /* eslint-disable */
 injectGlobal`
   body {
-    font-family: 'Catamaran', sans-serif;
-    color: ${theme.gray};
+    font-family: 'Catamaran',sans-serif !important;
+    color: ${theme.gray} !important;
   }
 `;
 /* eslint-enable */

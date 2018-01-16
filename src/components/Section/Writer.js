@@ -26,13 +26,13 @@ const Columns = styled.div.attrs({
 const Column = styled.div.attrs({
   className: props => props.size ? `column is-${props.size}` : 'column'
 })`
-  ${props => props.desktopHide && 'display: none;'}
+  ${props => props.desktopHide && 'display: none !important;'}
   @media(max-width: 768px) {
     padding: 10px 15px !important;
-    flex: none;
-    width: 250px;
-    ${props => props.mobileHide && 'display: none;'}
-    ${props => props.desktopHide && 'display: inherit;'}
+    flex: none !important;
+    width: 250px !important;
+    ${props => props.mobileHide && 'display: none !important;'}
+    ${props => props.desktopHide && 'display: inherit !important;'}
   }
 `;
 

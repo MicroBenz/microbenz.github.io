@@ -10,16 +10,16 @@ import Footer from '../components/Footer';
 /* eslint-disable */
 injectGlobal`
   body {
-    color: #4a4a4a;
+    color: #4a4a4a !important;
   }
   .column {
     @media(max-width: 768px) {
-      padding: 0;
+      padding: 0 !important;
     }
   }
   .columns {
-    margin-right: 0;
-    margin-left: 0;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 `;
 /* eslint-enable */

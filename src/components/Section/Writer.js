@@ -31,6 +31,7 @@ const Column = styled.div.attrs({
     padding: 10px 15px !important;
     flex: none !important;
     width: 250px !important;
+    margin-right: 15px;
     ${props => props.mobileHide && 'display: none !important;'}
     ${props => props.desktopHide && 'display: inherit !important;'}
   }

@@ -18,8 +18,8 @@ injectGlobal`
     }
   }
   .columns {
-    margin-right: 0 !important;
-    margin-left: 0 !important;
+    margin-right: 0;
+    margin-left: 0;
   }
 `;
 /* eslint-enable */
@@ -44,6 +44,11 @@ export const query = graphql`
         }
       }
     }
+    bannerImage: imageSharp(id: { regex: "/banner/" }) {
+      sizes(maxWidth: 1240) {
+        ...GatsbyImageSharpSizes
+      }
+    }
   }
 `;
 
@@ -51,7 +56,7 @@ const IndexPage = (props) => {
   const { data } = props;
   return (
     <div>
-      <Banner />
+      <Banner bannerImage={data.bannerImage} />
       <div className="container">
         <Me />
         <Geek />

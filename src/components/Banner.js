@@ -1,24 +1,36 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { withPrefix } from 'gatsby-link';
+import Img from 'gatsby-image';
 
 const Container = styled.div`
-  background: url('${withPrefix('./banner.jpg')}');
-  background-position: 50% 35%;
-  background-size: cover;
   height: 500px;
-  background-repeat: no-repeat;
+  position: relative;  
   @media(max-width: 768px) {
     height: 350px;
   }
+  .gatsby-image-outer-wrapper {
+    height: 100%;
+    img {
+      object-position: center 35% !important;
+    }
+  }
+`;
+
+const BannerImage = styled(Img)`
+  height: 100%;
 `;
 
 const InnerContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   @media(max-width: 768px) {
     flex-direction: column;
   }
@@ -74,8 +86,10 @@ const Subtitle = styled.p`
 `;
 
 const Banner = props => {
+  const { bannerImage } = props;
   return (
     <Container>
+      <BannerImage style={{ height: '100%' }} sizes={bannerImage.sizes} />
       <InnerContainer>
         <ImageContainer>
           <BrandingImage />

@@ -17,10 +17,19 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'img',
+        path: `${__dirname}/static/`
+      }
+    },
+    {
       resolve: 'gatsby-source-medium',
       options: {
         username: 'MicroBenz',
       },
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp'
   ],
 };

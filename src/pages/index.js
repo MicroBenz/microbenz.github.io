@@ -44,7 +44,7 @@ export const query = graphql`
         }
       }
     }
-    bannerImage: imageSharp(id: { regex: "/banner/" }) {
+    bannerImage: imageSharp(id: { regex: "/banner.jpg/" }) {
       sizes(maxWidth: 1240) {
         ...GatsbyImageSharpSizes
       }

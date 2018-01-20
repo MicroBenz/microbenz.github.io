@@ -40,7 +40,7 @@ const BlogCard = props => {
     >
       <Container>
         <Image
-          src={`https://cdn-images-1.medium.com/fit/c/1200/720/${virtuals.previewImage.imageId}`}
+          src={`https://cdn-images-1.medium.com/fit/c/600/360/${virtuals.previewImage.imageId}`}
           alt={title}
         />
         <TitleContainer>

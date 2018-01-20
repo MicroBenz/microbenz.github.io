@@ -57,10 +57,10 @@ const CircleIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: ${props => props.isLast ? '0' : '15'}px;
+  margin-right: 15px;
   @media(max-width: 768px) {
     margin-bottom: 20px;
-    margin-right: ${props => (props.isLastMobile || props.isLast) ? '0' : '15'}px;
+    margin-right: 15px;
   }
 `;
 

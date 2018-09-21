@@ -7,6 +7,9 @@ const Container = styled.div`
 
 const Image = styled.img`
   display: block;
+  margin: 0;
+  width: 100%;
+  object-fit: cover;
 `;
 
 const TitleContainer = styled.div`

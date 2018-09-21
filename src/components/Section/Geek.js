@@ -1,15 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { withPrefix } from 'gatsby-link';
-import moment from 'moment-timezone';
 
 import { SectionTitle, SectionDescription, Paragraph, Link } from '../Shared/Typo';
 import { SectionContainer } from '../Shared/Container';
 import ReactIcon from '../Animated/ReactIcon';
 import SkillCard from '../Card/SkillCard';
 import colors from '../../colors';
-
-moment.tz.setDefault('Asia/Bangkok');
 
 const TeamReactContainer = styled.div`
   display: flex;
@@ -52,7 +48,7 @@ const Column = styled.div.attrs({
 const Geek = () => (
   <SectionContainer>
     <SectionTitle>Geek</SectionTitle>
-    <SectionDescription>Graduate from Computer Engineering. {moment().diff(moment('2016', 'YYYY'), 'year')} years experience in Web Development.</SectionDescription>
+    <SectionDescription>Graduate from Computer Engineering. 2 years experience in Web Development.</SectionDescription>
     <TeamReactContainer>
       <ReactIcon size={200} />
       <TeamReactTitle>{'<TeamReact />'}</TeamReactTitle>

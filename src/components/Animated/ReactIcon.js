@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 import styled from 'styled-components';
-import { withPrefix } from 'gatsby-link';
+import { withPrefix } from 'gatsby';
 
 const LottieDiv = styled.div.attrs({
   size: props => props.size || 400

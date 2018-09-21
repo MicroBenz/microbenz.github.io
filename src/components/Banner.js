@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { withPrefix } from 'gatsby-link';
+import { withPrefix } from 'gatsby';
 import Img from 'gatsby-image';
 
 const Container = styled.div`

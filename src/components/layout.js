@@ -32,7 +32,7 @@ const TemplateWrapper = props => {
         ]}
       />
       <ThemeProvider theme={theme}>
-        {children()}
+        {children}
       </ThemeProvider>
     </div>
   );
